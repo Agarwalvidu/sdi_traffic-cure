@@ -1,0 +1,99 @@
+ .scene{
+    perspective: 600px;
+  }
+  .problem-cards-inside{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .heading-prob{
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  .items{
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  .item{
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .back {
+    transform: rotateY( 180deg );
+  }
+  
+  .items:hover {
+    transform: rotateY(180deg);
+  }
+  /*important styles >>*/
+   /*<< variations*/
+  .items-2 { 
+    transform-origin: center right; 
+  }
+  .items-2:hover {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  .items-3 { 
+    transform-origin: center left; 
+  }
+  .items-3:hover {
+    transform: translateX(100%) rotateY(-180deg);
+  }
+  .text-rotate{
+     transform: rotate(180deg);
+  }
+  .items-4:hover {
+    transform: rotateX(-180deg);
+  }
+  .items-5:hover {
+    transform: rotateX(180deg);
+  }
+  /*variations >>*/
+  .scene{
+    min-width: 200px;
+    height: 350px;
+    margin: 22px;
+  }
+  
+  .items{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px #ffffff;
+  }
+  .items-2 {
+    background-image: linear-gradient(to bottom, #e3f2fd, #c7fffb, #ffffff, #c2e3ff, #687a89); /* Soft blue shades */
+  }
+  
+  .items-3 {
+    background-image: linear-gradient(to top, #e8f5e9, #c8e6c9, #f8f8f8, #b3d4b4, #ccffcf); /* Gentle green tones */
+  }
+  
+  .items-4 {
+    background-image: linear-gradient(to bottom, #fffde7, #fff9c4, #fffde7, #e7dd8b, #fff9c0); /* Soft yellow tones */
+  }
+  
+  .items-5 {
+    background-image: linear-gradient(to top, #fbe9e7, #ffccbc, #ffffff, #e3b8aa, #ffe0d7); /* Warm coral hues */
+  }
+  @media only screen and (min-width: 500px) {
+    .problem-cards-inside{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media only screen and (min-width: 900px) {
+  
+    .problem-cards-inside {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
