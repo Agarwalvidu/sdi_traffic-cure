@@ -1,8 +1,7 @@
-// ProfilePage.jsx
 import React from "react";
 
 const ProfilePage = () => {
-  const userName = "John Doe"; // Replace with dynamic user data if available.
+  const userName = "User"; 
   const stats = {
     totalDistance: "1200 km",
     rewards: "₹500",
